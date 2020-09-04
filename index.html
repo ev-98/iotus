@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Iotus</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" 
+      type="image/png" 
+      href="./img/lotus.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <div class="nav-link-wrapper active-nav-link">
+          <a href="index.html">Projects</a>
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a href="about.html">About</a>
+        </div>
+      </div>
+
+      <div class="logo">
+        <img src="./img/lotus.png" alt="">
+      </div>
+  </div>
+    </div>
+    <div class="content-wrapper">
+    <div class="fade-in-splash">
+      <div class="portfolio-items-wrapper">
+        <a href="./projects/lgj.html">
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(img/lgj.png)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Discord bot that provides matchup and frame data from Street Fighter III: 3rd Strike</div>
+          </div>
+        </div>
+        </a>
+
+        <a href="./projects/nihon.html">
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(img/nihon.png)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Japanese tourism website mockup</div>
+          </div>
+        </div>
+        </a>
+
+        <a href="./projects/teklog.html">
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(img/teklog.png)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Open blog created to quickly post and edit information related to TEKKEN 7</div>
+          </div>
+        </div>
+        </a>
+
+        <a href="./projects/colors.html">
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(img/colors.png)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Randomly generates editable color palettes with save/load and clipboard functionality</div>
+          </div>
+        </div>
+        </a>
+
+        <a href="./projects/relax.html">
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(img/relax.png)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Productivity manager with an ambient theme</div>
+          </div>
+        </div>
+        </a>
+
+        <a href="./projects/nll.html">
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(img/nll.png)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Forum/planning site prototype designed as a platform for ex-felons wishing to reform</div>
+          </div>
+        </div>
+        </a>
+
+    </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
+
+</html>
